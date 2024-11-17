@@ -1,0 +1,1321 @@
+{
+	"info": {
+		"_postman_id": "f4e5dd6c-3115-4bf0-b9da-35beef504b60",
+		"name": "E-commerce app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36354522"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "addCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "dddddd",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/abdom/Pictures/wallpapers/sunsetOnMountain.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/categories",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/categories/:slug",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories",
+								":slug"
+							],
+							"variable": [
+								{
+									"key": "slug",
+									"value": "men's-fashion"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "men's fashion",
+									"type": "text"
+								},
+								{
+									"key": "categoryImage",
+									"type": "file",
+									"src": "/C:/Users/abdom/Pictures/formal photo.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/categories/:name",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories",
+								":name"
+							],
+							"variable": [
+								{
+									"key": "name",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/categories/66f59a27c37fa5b6251593c3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories",
+								"66f59a27c37fa5b6251593c3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subcategory",
+			"item": [
+				{
+					"name": "addSubCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "phones",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/abdom/Pictures/Screenshots/Ports.png"
+								},
+								{
+									"key": "category",
+									"value": "66f5c4272bf5e1e9497a7515",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/subcategories",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"subcategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allSubCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/subcategories",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"subcategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSubCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/subcategories/:slug",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"subcategories",
+								":slug"
+							],
+							"variable": [
+								{
+									"key": "slug",
+									"value": "men's-fashion"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateSubCategory",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Mobile phones",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/abdom/Pictures/wallpapers/wallpapersden.com_k-talking-to-the-moon_3840x2160.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/subcategories/66f5c8573239e41ceb593934",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"subcategories",
+								"66f5c8573239e41ceb593934"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteSubCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/subcategories/:name",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"subcategories",
+								":name"
+							],
+							"variable": [
+								{
+									"key": "name",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "brand",
+			"item": [
+				{
+					"name": "add-brand",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "apple",
+									"type": "text"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/C:/Users/abdom/Pictures/wallpapers/wallpapersden.com_k-talking-to-the-moon_3840x2160.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/brands",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-brand",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "apple",
+									"type": "text"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/C:/Users/abdom/Pictures/Screenshots/Screenshot (29).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/brands/66f1f9b4658eccd8ced11b0e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"brands",
+								"66f1f9b4658eccd8ced11b0e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-brands",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/brands",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-brand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}brands/66f1f9b4658eccd8ced11b0e",
+							"host": [
+								"{{url}}brands"
+							],
+							"path": [
+								"66f1f9b4658eccd8ced11b0e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-brand",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/brands/66f31276490de0bafb5be52e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brands",
+								"66f31276490de0bafb5be52e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "add-product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY5ZGJjMWIzM2JkZDQ0MGExMzlkNjgiLCJlbWFpbCI6ImFuODY1MDkwQGdtYWlsLmNvbSIsImlhdCI6MTcyODk5NTQ1N30.rXlxEwQ1GRsFARYNWBPolkaUu8F9RlT3io0caURzktI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "samsung a24",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "really cool phone",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "discount",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "discountType",
+									"value": "fixed",
+									"type": "text"
+								},
+								{
+									"key": "colors",
+									"value": "[\"red\",\"black\"]",
+									"type": "text"
+								},
+								{
+									"key": "sizes",
+									"value": "[\"mini\",\"max\"]",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "66f5c4272bf5e1e9497a7515",
+									"type": "text"
+								},
+								{
+									"key": "subcategory",
+									"value": "66f5c8573239e41ceb593934",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "66f5d26a416c8394a2e34e54",
+									"type": "text"
+								},
+								{
+									"key": "mainImage",
+									"type": "file",
+									"src": "/C:/Users/abdom/Pictures/formal photo.jpg"
+								},
+								{
+									"key": "subImages",
+									"type": "file",
+									"src": "/C:/Users/abdom/Pictures/Screenshots/Screenshot (31).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products/670e693625c74e851ec16a52",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"670e693625c74e851ec16a52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-product",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY5ZGJjMWIzM2JkZDQ0MGExMzlkNjgiLCJlbWFpbCI6ImFuODY1MDkwQGdtYWlsLmNvbSIsImlhdCI6MTcyOTAyMjgwMX0.GHaPNReocWjfW6zc5sxiJwak-RMvdJej4lPgpBAnzO0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "samsung a26",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "really cool phone",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "discount",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "discountType",
+									"value": "fixed",
+									"type": "text"
+								},
+								{
+									"key": "colors",
+									"value": "[\"red\",\"black\"]",
+									"type": "text"
+								},
+								{
+									"key": "sizes",
+									"value": "[\"mini\",\"max\"]",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "66f5c4272bf5e1e9497a7515",
+									"type": "text"
+								},
+								{
+									"key": "subcategory",
+									"value": "66f5c8573239e41ceb593934",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "66f5d26a416c8394a2e34e54",
+									"type": "text"
+								},
+								{
+									"key": "mainImage",
+									"type": "file",
+									"src": "/C:/Users/abdom/Pictures/wallpapers/wallpapersden.com_k-talking-to-the-moon_3840x2160.jpg"
+								},
+								{
+									"key": "subImages",
+									"type": "file",
+									"src": "/C:/Users/abdom/Pictures/formal photo.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products/670e691f25c74e851ec16a46",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"670e691f25c74e851ec16a46"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY5ZGJjMWIzM2JkZDQ0MGExMzlkNjgiLCJlbWFpbCI6ImFuODY1MDkwQGdtYWlsLmNvbSIsImlhdCI6MTcyODk5NTQ1N30.rXlxEwQ1GRsFARYNWBPolkaUu8F9RlT3io0caURzktI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products/670e691f25c74e851ec16a46",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"670e691f25c74e851ec16a46"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"name\": \"ahmed\",\r\n    // \"email\": \"an865090@gmail.com\",\r\n    // \"password\": \"Bolbol1234\",\r\n    // \"confirmPassword\": \"Bolbol1234\",\r\n    // \"phone\": \"01099711431\",\r\n    // \"DOB\": \"24/4/2004\"\r\n    \"name\": \"abdalrahman\",\r\n    \"email\": \"abdoshebr86@gmail.com\",\r\n    \"password\": \"Shabrawy55\",\r\n    \"confirmPassword\": \"Shabrawy55\",\r\n    \"phone\": \"01212596050\",\r\n    \"DOB\": \"2003-5-17\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"email\":\"an865090@gmail.com\",\r\n    // \"password\":\"Bolbol1234\"\r\n\r\n    \"email\":\"abdoshebr86@gmail.com\",\r\n    \"password\":\"Shabrawy55\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wishlist",
+			"item": [
+				{
+					"name": "addToWishlist",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY5ZGJjMWIzM2JkZDQ0MGExMzlkNjgiLCJlbWFpbCI6ImFuODY1MDkwQGdtYWlsLmNvbSIsImlhdCI6MTcyODk5NTQ1N30.rXlxEwQ1GRsFARYNWBPolkaUu8F9RlT3io0caURzktI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/wishList/670e691f25c74e851ec16a46",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"wishList",
+								"670e691f25c74e851ec16a46"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-wishlist",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY5ZGJjMWIzM2JkZDQ0MGExMzlkNjgiLCJlbWFpbCI6ImFuODY1MDkwQGdtYWlsLmNvbSIsImlhdCI6MTcyODk5NTQ1N30.rXlxEwQ1GRsFARYNWBPolkaUu8F9RlT3io0caURzktI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/wishList",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"wishList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-from-wishlist",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY5ZGJjMWIzM2JkZDQ0MGExMzlkNjgiLCJlbWFpbCI6ImFuODY1MDkwQGdtYWlsLmNvbSIsImlhdCI6MTcyODk5NTQ1N30.rXlxEwQ1GRsFARYNWBPolkaUu8F9RlT3io0caURzktI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/wishList/670e691f25c74e851ec16a46",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"wishList",
+								"670e691f25c74e851ec16a46"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "coupon",
+			"item": [
+				{
+					"name": "add-coupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY5ZGJjMWIzM2JkZDQ0MGExMzlkNjgiLCJlbWFpbCI6ImFuODY1MDkwQGdtYWlsLmNvbSIsImlhdCI6MTcyODk5NTQ1N30.rXlxEwQ1GRsFARYNWBPolkaUu8F9RlT3io0caURzktI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"444444\",\r\n    \"discountAmount\":\"50\",\r\n    \"discountType\":\"percentage\",\r\n    \"fromDate\":\"2024-10-28\",\r\n    \"toDate\":\"2024-11-11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/coupon",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-coupon",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY5ZGJjMWIzM2JkZDQ0MGExMzlkNjgiLCJlbWFpbCI6ImFuODY1MDkwQGdtYWlsLmNvbSIsImlhdCI6MTcyODk5NTQ1N30.rXlxEwQ1GRsFARYNWBPolkaUu8F9RlT3io0caURzktI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"123456\",\r\n    \"discountAmount\":\"60\",\r\n    \"discountType\":\"percentage\",\r\n    \"fromDate\":\"2024-10-28\",\r\n    \"toDate\":\"2024-11-11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/coupon/670fa9adc4522ccf6f3e7e75",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"coupon",
+								"670fa9adc4522ccf6f3e7e75"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all-coupons",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY5ZGJjMWIzM2JkZDQ0MGExMzlkNjgiLCJlbWFpbCI6ImFuODY1MDkwQGdtYWlsLmNvbSIsImlhdCI6MTcyODk5NTQ1N30.rXlxEwQ1GRsFARYNWBPolkaUu8F9RlT3io0caURzktI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/coupon",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-coupon",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY5ZGJjMWIzM2JkZDQ0MGExMzlkNjgiLCJlbWFpbCI6ImFuODY1MDkwQGdtYWlsLmNvbSIsImlhdCI6MTcyODk5NTQ1N30.rXlxEwQ1GRsFARYNWBPolkaUu8F9RlT3io0caURzktI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/coupon/670fa9adc4522ccf6f3e7e75",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"coupon",
+								"670fa9adc4522ccf6f3e7e75"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-coupon",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY5ZGJjMWIzM2JkZDQ0MGExMzlkNjgiLCJlbWFpbCI6ImFuODY1MDkwQGdtYWlsLmNvbSIsImlhdCI6MTcyODk5NTQ1N30.rXlxEwQ1GRsFARYNWBPolkaUu8F9RlT3io0caURzktI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/coupon/670fa9adc4522ccf6f3e7e75",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"coupon",
+								"670fa9adc4522ccf6f3e7e75"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "add-to-cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBmZTI2NWFiOThjMjVmODAyMDQ1NTgiLCJlbWFpbCI6ImFiZG9zaGVicjg2QGdtYWlsLmNvbSIsImlhdCI6MTcyOTA5NDMwM30.6IAcxfHgPzetknkMZgDKL7iTqK1vd-vmNjeYnjq4rHw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"670e692b25c74e851ec16a4c\",\r\n    \"quantity\":\"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cart",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all-cart-products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBmZTI2NWFiOThjMjVmODAyMDQ1NTgiLCJlbWFpbCI6ImFiZG9zaGVicjg2QGdtYWlsLmNvbSIsImlhdCI6MTcyOTA5NDMwM30.6IAcxfHgPzetknkMZgDKL7iTqK1vd-vmNjeYnjq4rHw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"670e692b25c74e851ec16a4c\",\r\n    \"quantity\":\"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cart",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-from-cart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBmZTI2NWFiOThjMjVmODAyMDQ1NTgiLCJlbWFpbCI6ImFiZG9zaGVicjg2QGdtYWlsLmNvbSIsImlhdCI6MTcyOTA5NDMwM30.6IAcxfHgPzetknkMZgDKL7iTqK1vd-vmNjeYnjq4rHw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/cart/670e692b25c74e851ec16a4c",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cart",
+								"670e692b25c74e851ec16a4c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "create-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBmZTI2NWFiOThjMjVmODAyMDQ1NTgiLCJlbWFpbCI6ImFiZG9zaGVicjg2QGdtYWlsLmNvbSIsImlhdCI6MTcyOTA5NDMwM30.6IAcxfHgPzetknkMZgDKL7iTqK1vd-vmNjeYnjq4rHw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"coupon\": \"123456\",\r\n    \"street\": \"el tahrer\",\r\n    \"phone\": \"01212596050\",\r\n    \"paymentMethod\": \"card\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/order",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/order/670e692b25c74e851ec16a4c",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"670e692b25c74e851ec16a4c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my-orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBmZTI2NWFiOThjMjVmODAyMDQ1NTgiLCJlbWFpbCI6ImFiZG9zaGVicjg2QGdtYWlsLmNvbSIsImlhdCI6MTcyOTA5NDMwM30.6IAcxfHgPzetknkMZgDKL7iTqK1vd-vmNjeYnjq4rHw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/order",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "review",
+			"item": [
+				{
+					"name": "add-review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBmZTI2NWFiOThjMjVmODAyMDQ1NTgiLCJlbWFpbCI6ImFiZG9zaGVicjg2QGdtYWlsLmNvbSIsImlhdCI6MTcyOTA5NDMwM30.6IAcxfHgPzetknkMZgDKL7iTqK1vd-vmNjeYnjq4rHw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"very bad product\",\r\n    \"rate\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/review/67113d7a0ddf6eff5a6573ae",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review",
+								"67113d7a0ddf6eff5a6573ae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-review",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBmZTI2NWFiOThjMjVmODAyMDQ1NTgiLCJlbWFpbCI6ImFiZG9zaGVicjg2QGdtYWlsLmNvbSIsImlhdCI6MTcyOTA5NDMwM30.6IAcxfHgPzetknkMZgDKL7iTqK1vd-vmNjeYnjq4rHw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"very mid product\",\r\n    \"rate\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/review/67113d8a0ddf6eff5a6573b6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review",
+								"67113d8a0ddf6eff5a6573b6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-reviews",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBmZTI2NWFiOThjMjVmODAyMDQ1NTgiLCJlbWFpbCI6ImFiZG9zaGVicjg2QGdtYWlsLmNvbSIsImlhdCI6MTcyOTA5NDMwM30.6IAcxfHgPzetknkMZgDKL7iTqK1vd-vmNjeYnjq4rHw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/review/67113d7a0ddf6eff5a6573ae",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review",
+								"67113d7a0ddf6eff5a6573ae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-review",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBmZTI2NWFiOThjMjVmODAyMDQ1NTgiLCJlbWFpbCI6ImFiZG9zaGVicjg2QGdtYWlsLmNvbSIsImlhdCI6MTcyOTA5NDMwM30.6IAcxfHgPzetknkMZgDKL7iTqK1vd-vmNjeYnjq4rHw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/review/670e692b25c74e851ec16a4c/67113c83ca213b84fae4488c",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review",
+								"670e692b25c74e851ec16a4c",
+								"67113c83ca213b84fae4488c"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBmZTI2NWFiOThjMjVmODAyMDQ1NTgiLCJlbWFpbCI6ImFiZG9zaGVicjg2QGdtYWlsLmNvbSIsImlhdCI6MTcyOTA5NDMwM30.6IAcxfHgPzetknkMZgDKL7iTqK1vd-vmNjeYnjq4rHw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/review/670e692b25c74e851ec16a4c/67113c83ca213b84fae4488c",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review",
+								"670e692b25c74e851ec16a4c",
+								"67113c83ca213b84fae4488c"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
